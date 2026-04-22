@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <nav class="nav-bar">
+    <div class="nav-container">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="logo">
+            <h1>RINKI</h1>
+        </div>
+
+        <!-- <ul class="nav-links">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Tees</a></li>
+            <li><a href="#">Hoodies</a></li>
+        </ul> -->
+        <ul class="nav-links">
+    <li class="has-dropdown">
+        <a href="#">Men</a>
+        <ul class="dropdown-menu">
+            <li><a href="#">T-Shirts</a></li>
+            <li><a href="#">Oversized Tees</a></li>
+            <li><a href="#">Hoodies</a></li>
+            <li><a href="#">Joggers</a></li>
+        </ul>
+    </li>
+
+    <li class="has-dropdown">
+        <a href="#">Women</a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Tops</a></li>
+            <li><a href="#">Dresses</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Accessories</a></li>
+        </ul>
+    </li>
+    
+    <li><a href="#">New Arrivals</a></li>
+</ul>
+
+        <div class="nav-extra">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search...">
+                <button>🔍</button>
+            </div>
+            <a href="#" class="icon">👤</a>
+            <a href="#" class="icon">🛒</a>
+        </div>
+    </div>
+</nav>
+
+<!-- <section class="hero-slider">
+    <div class="slider-container">
+        <div class="slider-track">
+            
+            <div class="slide slide-1">
+                <div class="hero-content">
+                    <h2>OVERSIZED T-SHIRTS</h2>
+                    <p>PICK ANY 2 @999</p>
+                    <button class="hero-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="slide slide-2">
+                <div class="hero-content">
+                    <h2>RELAXED FIT</h2>
+                    <p>ULTIMATE COMFORT</p>
+                    <button class="hero-btn">Explore</button>
+                </div>
+            </div>
+
+            <div class="slide slide-3">
+                <div class="hero-content">
+                    <h2>BOLD PRINTS</h2>
+                    <p>STAND OUT FROM THE CROWD</p>
+                    <button class="hero-btn">View All</button>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="prev-btn">❮</button>
+        <button class="next-btn">❯</button>
+        
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section> -->
+ 
+<section class="hero-section">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide slide-1">
+        <div class="hero-content">
+          <h2>OVERSIZED T-SHIRTS</h2>
+          <p>PICK ANY 2 @999</p>
+          <button class="hero-btn">Shop Now</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide-2">
+        <div class="hero-content">
+          <h2>SUMMER VIBES</h2>
+          <p>UP TO 50% OFF</p>
+          <button class="hero-btn">Explore</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide-3">
+        <div class="hero-content">
+          <h2>SUMMER VIBES</h2>
+          <p>UP TO 50% OFF</p>
+          <button class="hero-btn">Explore</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<section class="categories-section">
+    <div class="section-header">
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle">Curated essentials for your wardrobe</p>
+    </div>
+
+    <div class="category-grid">
+        <div class="category-card category-card--large">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000" alt="Women's Collection">
+            <div class="category-overlay">
+                <h3>Women's Collection</h3>
+                <a href="#" class="shop-link">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1000" alt="Men's Essentials">
+            <div class="category-overlay">
+                <h3>Men's Essentials</h3>
+                <a href="#" class="shop-link">Explore</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1000" alt="Accessories">
+            <div class="category-overlay">
+                <h3>Accessories</h3>
+                <a href="#" class="shop-link">View All</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="products-section">
+  <div class="section-header">
+    <h2>Best Sellers</h2>
+    <p>The pieces everyone is talking about.</p>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-card__image">
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000" alt="Premium Cotton Tee">
+        <div class="product-card__actions">
+          <button class="add-to-cart-btn">Quick Add +</button>
+        </div>
+        <span class="wishlist-icon">♡</span>
+      </div>
+      <div class="product-card__info">
+        <h3 class="product-name">Premium Cotton Tee</h3>
+        <p class="product-category">Men • Essentials</p>
+        <p class="product-price">₹999.00</p>
+      </div>
+    </div>
+
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h2 class="footer-logo">RINKI</h2>
+            <p class="brand-text">Redefining modern essentials with a focus on quality, comfort, and timeless style. Designed for the bold.</p>
+            <div class="social-links">
+                <a href="#">FB</a>
+                <a href="#">IG</a>
+                <a href="#">TW</a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="#">Men's Collection</a></li>
+                <li><a href="#">Women's Collection</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Best Sellers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Stay Connected</h3>
+            <p>Join our list for exclusive offers and news.</p>
+            <form class="footer-newsletter">
+                <input type="email" placeholder="Email Address">
+                <button type="submit">Join</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Rinki Store. All Rights Reserved.</p>
+        <div class="payment-methods">
+            <span>VISA</span> | <span>MC</span> | <span>UPI</span>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+<script src="main.js"></script>
+</html>

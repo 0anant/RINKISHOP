@@ -1,0 +1,81 @@
+/* 1.Promo Banner Styling */
+.promo-banner {
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* 2. Nav Bar Adjustmaents */
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 4%;
+  background-color: white;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 3. The Category Links */
+.nav-categories {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-categories a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+  transition: color 0.2s;
+}
+
+.nav-categories a:hover {
+  color: #ff4757;
+}
+
+/* 4. The Right Side (Search & Icons) */
+.nav-bar__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 5. The Search Box Magic */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color: #fafafa;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Icons */
+.nav-icons {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}

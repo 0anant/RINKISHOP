@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This makes sure padding doesn't break your widths */
+}
+/* --- MOBILE STYLES (Default) --- */
+.nav-bar {
+  background: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hide the checkbox */
+.nav-toggle {
+  display: none;
+}
+
+/* Hamburger Icon styling */
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  transition: 0.3s;
+}
+
+/* Mobile Nav Links - Hidden by default */
+.nav-links {
+  position: absolute;
+  top: 100%;
+  left: -100%; /* Off-screen */
+  background: white;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  padding: 40px;
+  transition: 0.4s;
+  list-style: none;
+}
+
+/* When checkbox is checked, slide menu in */
+.nav-toggle:checked ~ .nav-links {
+  left: 0;
+}
+
+/* Hide Desktop Search on Mobile */
+.search-wrapper {
+  display: none;
+}
+
+/* --- DESKTOP STYLES --- */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  } /* Hide hamburger */
+
+  .nav-links {
+    position: static; /* Put it back in the row */
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .search-wrapper {
+    display: flex;
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+
+  .search-wrapper input {
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+  .nav-extra {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* 1. Position the parent so the dropdown knows where to align */
+.has-dropdown {
+  position: relative;
+}
+
+/* 2. Hide the dropdown menu and style it */
+.dropdown-menu {
+  display: none; /* Invisible by default */
+  position: absolute; /* Sits on top of other content */
+  top: 100%; /* Appears right below the Nav Link */
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Professional shadow */
+  list-style: none;
+  padding: 10px 0;
+  border-top: 2px solid black; /* Nice aesthetic touch */
+  z-index: 1000;
+}
+
+/* 3. Dropdown Links */
+.dropdown-menu li a {
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+  text-transform: none; /* Keep it readable */
+  font-weight: 400;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f5f5f5;
+  color: #ff4757;
+}
+
+/* 4. THE MAGIC: Show on Hover */
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.hero-section {
+  width: 100%;
+  height: 80vh; /* Professional height for hero banners */
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Backgrounds (Replace with real client images later) */
+.slide-1 {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1558191053-8edcb01e1da3?auto=format&fit=crop&w=1350&q=80");
+}
+.slide-2 {
+  background-color: #f4f4f4;
+}
+.slide-3 {
+  background-color: #ff4757;
+}
+
+.hero-content h2 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+/* Customizing Swiper Arrows to be Black (Clean look) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important;
+}
+
+.categories-section {
+  padding: 80px 5%;
+  background-color: #fff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300; /* Light weight looks more premium */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  color: #888;
+  margin-top: 10px;
+}
+
+/* The Grid Layout */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 column base */
+  grid-template-rows: 500px; /* Fixed height for the row */
+  gap: 20px;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  grid-column: span 1; /* Standard cards take 1 column */
+}
+
+.category-card--large {
+  grid-column: span 2; /* Large card takes 2 columns */
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills box without stretching */
+  transition: transform 0.8s ease;
+}
+
+/* The Aesthetic Hover Effect */
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+}
+
+.category-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shop-link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.products-section {
+  padding: 60px 5%;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Responsive columns */
+  gap: 40px 20px; /* More space vertically than horizontally */
+}
+
+/* Image Container */
+.product-card__image {
+  position: relative;
+  aspect-ratio: 3 / 4; /* Modern portrait look */
+  overflow: hidden;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover Effects */
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* The Hidden "Quick Add" */
+.product-card__actions {
+  position: absolute;
+  bottom: -50px; /* Hidden below the card */
+  left: 0;
+  width: 100%;
+  transition: bottom 0.3s ease;
+}
+
+.product-card:hover .product-card__actions {
+  bottom: 0; /* Slides up on hover */
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Typography Styling */
+.product-card__info {
+  text-align: left; /* Left align is more modern than center for shopify-style sites */
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.product-category {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.main-footer {
+  background-color: #111;
+  color: #fff;
+  padding: 80px 5% 40px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 200px; /* Each col stays at least 200px before wrapping */
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+/* Newsletter Input */
+.footer-newsletter {
+  display: flex;
+  margin-top: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.footer-newsletter input {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  flex: 1;
+  outline: none;
+}
+
+.footer-newsletter button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555;
+  font-size: 0.85rem;
+}
